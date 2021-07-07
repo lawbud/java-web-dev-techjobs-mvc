@@ -35,7 +35,16 @@
     </form>
 
     <hr />
-
+    <tr th:each="job : ${jobs}">
+        <td>
+            <p><strong> ID: <span th:text="${job.getId()}"/></strong></p>
+            <p><strong> Name: <span th:text="${job.getName()}"/></strong></p>
+            <p><strong> Employer: <span th:text="${job.getEmployer()}"/></strong></p>
+            <p><strong> Location: <span th:text="${job.getLocation()}"/></strong></p>
+            <p><strong> Position Typo: <span th:text="${job.getPositionType()}"/></strong></p>
+            <p><strong> Core Competency: <span th:text="${job.getCoreCompetency()}"/></strong></p>
+        </td>
+    </tr>
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
 </div>
